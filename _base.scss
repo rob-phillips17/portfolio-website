@@ -1,0 +1,28 @@
+@use "./variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-body;
+    font-size: 1.1rem;
+    color: $color-white;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+p {
+    margin: 0;
+}
+
+i {
+    font-size: 110%;
+}
+
+body {
+    background-color: $color-black;
+}

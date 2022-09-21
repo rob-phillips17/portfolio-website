@@ -1,0 +1,285 @@
+@use "./variables" as *;
+@use "./base" as *;
+@use "./components" as *;
+@use "./layout" as *;
+
+/* mobile phone breakpoint */
+
+@media all and (max-width: 490px) {
+
+    .intro {
+        margin-top: 50%;
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        &__menu {
+            display: block;
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+        }
+
+        &__menu:hover {
+            cursor: pointer;
+        }
+
+        &__navList {
+            width: 100%;
+            display: none;
+        }
+
+        &__listItem {
+            display: block;
+            border-top: 1px solid $color-white;
+            text-align: center;
+        }
+
+        &__listItem:last-child {
+            border-bottom: 1px solid $color-white;
+        }
+
+        &__div-logo {
+            width: 100%;
+            margin-bottom: 24px;
+            padding: 0;
+        }
+
+        .active {
+            display: block;
+        }
+    }
+}
+
+/* tablet media query breakpoint */
+
+@media all and (min-width: 768px) {
+
+    * {
+        font-size: 1.3rem;
+    }
+
+    i {
+        font-size: 140%;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .img-div {
+        height: 330px;
+        width: 330px;
+        border: solid 3px $color-highlight;
+    }
+
+    .navbar {
+
+        &__logo {
+            font-size: 2.4rem;
+        }
+
+        &__listItem {
+            padding: 10px 24px;
+        }
+    }
+
+    .intro {
+
+        margin-top: 40%;
+
+        &__heading {
+            font-size: 150%;
+        }
+
+        &__subheading {
+            font-size: 175%;
+        }
+
+        &__icon-div {
+            margin-top: 38%;
+        }
+    }
+
+    .about {
+
+        &__title-con {
+            padding-top: 40%;
+        }
+
+        &__img-div {
+            margin-top: 14%;
+        }
+
+        &__text-container {
+            padding-top: 40%;
+        }
+
+        &__icon {
+            padding: 8%;
+        }
+    }
+
+    .projects {
+
+        &__heading {
+            padding-top: 12%;
+        }
+    }
+
+    .project-card {
+        padding-top: 5%;
+    }
+
+    .footer {
+        background-color: $color-tertiary;
+    }
+}
+
+
+/* desktop media query breakpoint */
+
+@media all and (min-width: 1024px) {
+
+    i {
+        font-size: 90%;
+    }
+
+    .heading {
+        font-size: 2.2rem;
+        padding-left: 5%;
+        text-align: left;
+    }
+
+    .img-div {
+        height: 300px;
+        width: 300px;
+        border: solid 3px $color-highlight;
+    }
+
+    .navbar {
+
+        &__logo {
+            font-size: 1.75rem;
+        }
+
+        &__listItem {
+            padding: 10px 24px;
+        }
+    }
+
+    .intro {
+
+        margin-top: 15%;
+
+        &__heading {
+            font-size: 120%;
+        }
+
+        &__subheading {
+            font-size: 120%;
+        }
+
+        &__icon-div {
+            margin-top: 14%;
+        }
+    }
+
+    .about {
+
+        &__title-con {
+            padding-top: 10%;
+            padding-bottom: 3%;
+            justify-content: left;
+        }
+
+        &__img-div {
+            margin-top: 8%;
+            left: 60%;
+        }
+
+        &__text-container {
+            padding: 1% 40% 20% 5%;
+            text-align: left;
+        }
+
+        &__text {
+            font-size: 1.1rem;
+        }
+
+        &__icon-div {
+            font-size: 2rem;
+            position: absolute;
+            margin: 12% auto 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        &__icon {
+            padding: 4%;
+        }
+    }
+
+    .projects {
+
+        text-align: left;
+
+        &__heading {
+            padding-top: 10%;
+        }
+    }
+
+    .project-card {
+        padding: 5%;
+        display: flex;
+
+        &__img-div {
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 10%;
+        }
+
+        &__heading {
+            margin-bottom: 5%;
+        }
+
+        &__text {
+            font-size: 1.1rem;
+        }
+
+    }
+
+    .project-card:nth-child(3) {
+        flex-direction: row-reverse;
+        padding-bottom: 0;
+
+        .project-card__container:nth-of-type(2) {
+            padding-right: 10%;
+            padding-left: 0;
+        }
+    }
+
+    .project-card:nth-child(5) {
+        padding-top: 0;
+    }
+
+
+    .footer {
+        background-color: $color-tertiary;
+
+        &__link {
+            font-size: 1.75rem;
+        }
+
+        &__text {
+            font-size: 1.1rem;
+        }
+    }
+}
